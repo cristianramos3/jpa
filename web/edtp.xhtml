@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="Crear/Editar"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="IdP:" for="idP" />
+                    <h:inputText readonly="true" id="idP" value="#{datosController.p.idP}" title="IdP" required="true" requiredMessage="The IdP field is required."/>
+                    <h:outputLabel value="Nombre:" for="nombre" />
+                    <h:inputText id="nombre" value="#{datosController.p.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+                    <h:outputLabel value="Apellido:" for="apellido" />
+                    <h:inputText id="apellido" value="#{datosController.p.apellido}" title="Apellido" required="true" requiredMessage="The Apellido field is required."/>
+                    <h:outputLabel value="Descripcion:" for="descripcion" />
+                    <h:inputText id="descripcion" value="#{datosController.p.descripcion}" title="Descripcion" required="true" requiredMessage="The Descripcion field is required."/>
+                    <h:outputLabel value="FechaDeEjecucion:" for="fechaDeEjecucion" />
+                    <h:inputText id="fechaDeEjecucion" value="#{datosController.p.fechaDeEjecucion}" title="FechaDeEjecucion" required="true" requiredMessage="The FechaDeEjecucion field is required."/>
+                    <h:outputLabel value="Precio:" for="precio" />
+                    <h:inputText id="precio" value="#{datosController.p.precio}" title="Precio" required="true" requiredMessage="The Precio field is required."/>
+                    <h:outputLabel value="NumeroS:" for="numeroS" />
+                    <h:inputText id="numeroS" value="#{datosController.p.numeroS}" title="NumeroS" required="true" requiredMessage="The NumeroS field is required."/>
+                    <h:commandButton value="Guardar" action="#{datosController.edtp()}"> </h:commandButton>
+               
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

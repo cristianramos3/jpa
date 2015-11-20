@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="Crear/Editar"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="IdA:" for="idA" />
+                    <h:inputText readonly="true" id="idA" value="#{datosController.ag.idA}" title="IdA" required="true" requiredMessage="The IdA field is required."/>
+                    <h:outputLabel value="Nombre:" for="nombre" />
+                    <h:inputText id="nombre" value="#{datosController.ag.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+                    <h:outputLabel value="Direccion:" for="direccion" />
+                    <h:inputText id="direccion" value="#{datosController.ag.direccion}" title="Direccion" required="true" requiredMessage="The Direccion field is required."/>
+                    <h:outputLabel value="Departamento:" for="departamento" />
+                    <h:inputText id="departamento" value="#{datosController.ag.departamento}" title="Departamento" required="true" requiredMessage="The Departamento field is required."/>
+                    <h:outputLabel value="Telefono:" for="telefono" />
+                    <h:inputText id="telefono" value="#{datosController.ag.telefono}" title="Telefono" required="true" requiredMessage="The Telefono field is required."/>
+                    <h:commandButton value="Guardar" action="#{datosController.edtag()}"></h:commandButton>     
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

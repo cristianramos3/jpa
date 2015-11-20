@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body> <body bgcolor="green"></body>
+        <h:form>
+            <h:dataTable var="p" value="#{datosController.findAllp()}" border="1" cellspacing="2" cellpadding="3">
+                <h:column>    
+                    ID_P: 
+                    <h:outputText value="#{p.idP}"> </h:outputText>
+                </h:column>
+            <h:column>
+                Nombre: 
+                <h:outputText value="#{p.nombre}"> </h:outputText>
+            </h:column>
+            <h:column>
+            Apellido:
+            <h:outputText value="#{p.apellido}"> </h:outputText>
+            </h:column>
+            <h:column>
+            Descripcion:
+            <h:outputText value="#{p.descripcion}"> </h:outputText>
+            </h:column>
+            <h:column>
+            FechaDeEjecucion: 
+            <h:outputText value="#{p.fechaDeEjecucion}"> </h:outputText>
+            </h:column>
+            <h:column>
+            Precio:
+            <h:outputText value="#{p.precio}"> </h:outputText>
+            </h:column>
+            <h:column>
+            Numero_S: 
+            <h:outputText value="#{p.numeroS}"> </h:outputText>
+            </h:column>
+            <h:column>
+                Option: 
+                <h:commandLink value="Delete" action="#{datosController.deletep(p)}" onclick="return confirm('Seguro?')"> </h:commandLink> //
+                <h:commandLink value="Editar" action="#{datosController.edtp(p)}"> </h:commandLink>//
+                <h:link value="Agregar Paquete" outcome="addp"></h:link>
+            </h:column>
+            </h:dataTable>
+        </h:form>
+        <br></br> <br></br>
+         <h:link value="Regresar al menu principal" outcome="index"></h:link>
+    </h:body>
+</html>
+

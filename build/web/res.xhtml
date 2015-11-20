@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body> <body bgcolor="orange"></body>
+        <h:form>
+            <h:dataTable var="s" value="#{datosController.findAlls()}" border="1" cellspacing="2" cellpadding="3">
+                <h:column>    
+                Numero_s: 
+                <h:outputText value="#{s.numeroS}"> </h:outputText>
+                </h:column>
+            <h:column>
+                Fecha: 
+                <h:outputText value="#{s.fecha}"> </h:outputText>
+            </h:column>
+            <h:column>
+            Paquete:
+            <h:outputText value="#{s.paquete}"> </h:outputText>
+            </h:column>
+            <h:column>
+            Vendedor:
+            <h:outputText value="#{s.vendedor}"> </h:outputText>
+            </h:column>
+            <h:column>
+            Precio: 
+            <h:outputText value="#{s.precio}"> </h:outputText>
+            </h:column>
+            </h:dataTable>
+        </h:form>
+        <br></br> <br></br>
+         <h:link value="Regresar al menu principal" outcome="index"></h:link>
+    </h:body>
+</html>
+

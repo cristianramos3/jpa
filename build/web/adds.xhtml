@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="Crear/Editar"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="NumeroS:" for="numeroS" />
+                    <h:inputText id="numeroS" value="#{datosController.s.numeroS}" title="NumeroS" required="true" requiredMessage="The NumeroS field is required."/>
+                    <h:outputLabel value="Fecha:" for="fecha" />
+                    <h:inputText id="fecha" value="#{datosController.s.fecha}" title="Fecha" required="true" requiredMessage="The Fecha field is required."/>
+                    <h:outputLabel value="Paquete:" for="paquete" />
+                    <h:inputText id="paquete" value="#{datosController.s.paquete}" title="Paquete" required="true" requiredMessage="The Paquete field is required."/>
+                    <h:outputLabel value="Vendedor:" for="vendedor" />
+                    <h:inputText id="vendedor" value="#{datosController.s.vendedor}" title="Vendedor" required="true" requiredMessage="The Vendedor field is required."/>
+                    <h:outputLabel value="Precio:" for="precio" />
+                    <h:inputText id="precio" value="#{datosController.s.precio}" title="Precio" required="true" requiredMessage="The Precio field is required."/>
+                    <h:commandButton value="Guardar" action="#{datosController.adds()}"> </h:commandButton>
+                 
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
